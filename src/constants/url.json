@@ -1,4 +1,5 @@
 {
     "catFacts": "https://catfact.ninja/fact",
-    "randomJokes": "https://official-joke-api.appspot.com/random_joke"
+    "randomJokes": "https://official-joke-api.appspot.com/random_joke",
+    "university": "http://universities.hipolabs.com/search"
 }

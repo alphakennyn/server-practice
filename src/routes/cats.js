@@ -3,8 +3,8 @@ const basicModule = require('../manager/basic.js');
 const router = express.Router();
 
 /* GET home page. */
-router.get('/fact', async function(req, res, next) {
-    const catFact = await basicModule.getCatFact();
+router.get('/fact', function(req, res, next) {
+    const catFact = basicModule.getCatFact();
 
     res.json({ fact: catFact });
 });
