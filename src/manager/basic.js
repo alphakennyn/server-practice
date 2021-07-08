@@ -4,6 +4,6 @@ exports.getDate = function () {
     return Date();
 };
 
-exports.getCatNames = async function (count) {
-    return await catRepository.getCatFacts(count)
+exports.getCatFact = async function () {
+    return await catRepository.getCatFact();
 }
