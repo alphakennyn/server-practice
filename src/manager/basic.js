@@ -7,7 +7,7 @@ exports.getDate = function () {
 
 exports.getCatFact = async function () {
     try {
-        const getCatFn = await catRepository
+        const getCatFn  = catRepository
         const { getCatFact } = getCatFn
         const getCatFacts = await getCatFact()
         return getCatFacts
@@ -17,5 +17,10 @@ exports.getCatFact = async function () {
 }
 
 exports.getAllUniversities = async function (country) {
+    try {
+        const getUniFn = await universityRepository
+    } catch (e) {
+
+    }
     return await universityRepository.getAllUniversities(country);
 }
