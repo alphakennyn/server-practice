@@ -12,13 +12,14 @@ const setupUniversityAxiosOption = (country = '') => {
 exports.getAllUniversities = async function (country) {
     try {
         const options = setupUniversityAxiosOption(country)
-        console.log(country, options)
         const { data } = await axios.request(options);
-        
         return data;
     } catch (e) {
         console.error(e.message)
-
         return e;
     }
+}
+
+linh = () => {
+    return "hi"
 }

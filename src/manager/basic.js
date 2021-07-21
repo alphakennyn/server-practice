@@ -7,8 +7,7 @@ exports.getDate = function () {
 
 exports.getCatFact = async function () {
     try {
-        const getCatFn  = catRepository
-        const { getCatFact } = getCatFn
+        const { getCatFact } = catRepository
         const getCatFacts = await getCatFact()
         return getCatFacts
     } catch (e) {
@@ -18,9 +17,10 @@ exports.getCatFact = async function () {
 
 exports.getAllUniversities = async function (country) {
     try {
-        const getUniFn = await universityRepository
+        const { getAllUniversities } = universityRepository
+        const getUniversities = await getAllUniversities(country)
+        return getUniversities 
     } catch (e) {
-
+        throw new Error('Error in retrieving universities')
     }
-    return await universityRepository.getAllUniversities(country);
 }
