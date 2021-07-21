@@ -3,9 +3,9 @@ const basicModule = require('../manager/basic.js');
 const router = express.Router();
 
 /* GET home page. */
-router.get('/fact', function(req, res, next) {
-    const catFact = basicModule.getCatFact();
-
+router.get('/fact', async function(req, res, next) {
+    const catFact = await basicModule.getCatFact();
+    console.log("catFact from route /fact", catFact)
     res.json({ fact: catFact });
 });
 
