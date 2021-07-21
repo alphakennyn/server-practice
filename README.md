@@ -35,6 +35,7 @@ npm install
 You're a new dev at company X. Your supervisor puts you in charge of an old legacy project with some issues. Your job is to patch of some of these.
 
 - The exists an endpoint `/cats/fact` that should return a string of a random cat fact, but it's returning `{}`. Can you identify the problem?
+The getCatFact function from `/repository/cats.js ` is an async function. When the function was getting called in `/routes/cats.js`, the callback in the `get` function was not wrapped in an async function.
 
 - The `basic` manager (`src/manager/basic.js`) seems to be doing a lot. Can you extract some of the functions?
 
