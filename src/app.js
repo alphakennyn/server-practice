@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var catRouter = require('./routes/cats');
+var universityRouter = require('./routes/university');
 
 var app = express();
 
@@ -16,6 +17,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/cats', catRouter);
+app.use('/universities', universityRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
